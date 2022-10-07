@@ -133,10 +133,6 @@ export default class ActionGroup extends React.Component<Props> {
       showSeparators,
     } = this.props;
     const optionViews: React.ReactNode[] = [];
-    const nativeFeedbackBackground = TouchableNativeFeedbackSafe.Ripple(
-      'rgba(58, 58, 58, 1)',
-      false
-    );
 
     for (let i = startIndex; i < startIndex + length; i++) {
       const defaultColor = tintColor

@@ -3,15 +3,14 @@ import {
   Platform,
   TouchableNativeFeedback,
   TouchableOpacity,
-  View,
   TouchableWithoutFeedbackProps,
+  View,
 } from 'react-native';
 
 // This TouchableOpacity has the same staic method of TouchableNativeFeedback
 class CustomTouchableOpacity extends React.Component {
   static SelectableBackground = () => ({});
   static SelectableBackgroundBorderless = () => ({});
-  static Ripple = (color: string, borderless?: boolean) => ({});
 
   render() {
     return <TouchableOpacity {...this.props}>{this.props.children}</TouchableOpacity>;
@@ -31,7 +30,6 @@ type Props = TouchableWithoutFeedbackProps & {
 export default class TouchableNativeFeedbackSafe extends React.Component<Props> {
   static SelectableBackground = TouchableComponent.SelectableBackground;
   static SelectableBackgroundBorderless = TouchableComponent.SelectableBackgroundBorderless;
-  static Ripple = TouchableComponent.Ripple;
 
   render() {
     if (TouchableComponent === TouchableNativeFeedback) {
