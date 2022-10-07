@@ -156,7 +156,6 @@ export default class ActionGroup extends React.Component<Props> {
           ref={autoFocus && i === 0 ? focusViewOnRender : undefined}
           key={i}
           pressInDelay={0}
-          background={nativeFeedbackBackground}
           disabled={disabled}
           onPress={() => onSelect(i)}
           style={[styles.button, disabled && styles.disabledButton]}
