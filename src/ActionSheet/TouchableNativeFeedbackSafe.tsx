@@ -36,7 +36,10 @@ export default class TouchableNativeFeedbackSafe extends React.Component<Props> 
   render() {
     if (TouchableComponent === TouchableNativeFeedback) {
       return (
-        <TouchableComponent {...this.props} style={{}}>
+        <TouchableComponent {...this.props} style={{}} background={TouchableNativeFeedbackSafe.Ripple(
+      '#FFFFFF33',
+      false
+    )}>
           <View style={this.props.style}>{this.props.children}</View>
         </TouchableComponent>
       );
