@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   AccessibilityInfo,
-  findNodeHandle,
   Image,
   Platform,
   ScrollView,
@@ -9,6 +8,7 @@ import {
   Text,
   UIManager,
   View,
+  findNodeHandle,
 } from 'react-native';
 
 import { ActionSheetOptions } from '../types';
@@ -134,7 +134,7 @@ export default class ActionGroup extends React.Component<Props> {
     } = this.props;
     const optionViews: React.ReactNode[] = [];
     const nativeFeedbackBackground = TouchableNativeFeedbackSafe.Ripple(
-      'rgba(180, 180, 180, 1)',
+      'rgba(58, 58, 58, 1)',
       false
     );
 
