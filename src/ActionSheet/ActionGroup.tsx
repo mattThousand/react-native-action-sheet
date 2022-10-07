@@ -133,6 +133,10 @@ export default class ActionGroup extends React.Component<Props> {
       showSeparators,
     } = this.props;
     const optionViews: React.ReactNode[] = [];
+    const nativeFeedbackBackground = TouchableNativeFeedbackSafe.Ripple(
+      '#FFFFFF33',
+      false
+    );
 
     for (let i = startIndex; i < startIndex + length; i++) {
       const defaultColor = tintColor
@@ -152,6 +156,7 @@ export default class ActionGroup extends React.Component<Props> {
           ref={autoFocus && i === 0 ? focusViewOnRender : undefined}
           key={i}
           pressInDelay={0}
+          background={nativeFeedbackBackground}
           disabled={disabled}
           onPress={() => onSelect(i)}
           style={[styles.button, disabled && styles.disabledButton]}
